@@ -3,6 +3,8 @@ import 'package:insta_copy/home_page_posts_component.dart';
 import 'package:insta_copy/home_page_story_component.dart';
 import 'package:insta_copy/home_page_top_component.dart';
 
+import 'bottom_bar.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -16,12 +18,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-            useMaterial3: true,
-            textTheme: Typography.whiteHelsinki,
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.black38)
-                .copyWith(background: Colors.black)),
-      home:  MyHomePage(),
+      theme: ThemeData(
+          useMaterial3: true,
+          textTheme: Typography.whiteHelsinki,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.black38)
+              .copyWith(background: Colors.black)),
+      home: MyHomePage(),
     );
   }
 }
@@ -32,21 +34,21 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-      ),
-      body: Column(
-        children: [
-          HeaderComponent(),
-          StoryComponent(),
-          PostsComponent(),
-        ],
-      )
-    );
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+        ),
+        body: Column(
+          children: [
+            HeaderComponent(),
+            StoryComponent(),
+            Expanded(
+              child: PostsComponent(),
+            ),
+            BottomBar(),
+          ],
+        ));
   }
 }
