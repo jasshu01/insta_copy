@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:insta_copy/home_page_components.dart';
 import 'package:insta_copy/home_page_posts_component.dart';
 import 'package:insta_copy/home_page_story_component.dart';
 import 'package:insta_copy/home_page_top_component.dart';
+import 'package:insta_copy/search_page.dart';
 
 import 'bottom_bar.dart';
 
@@ -11,6 +14,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+  static Widget currMainComponent = MyHomePageComponents();
 
   // This widget is the root of your application.
   @override
@@ -36,18 +41,65 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    print(MyApp.currMainComponent);
+    // MyApp.currMainComponent=SearchPage();
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
         ),
         body: Column(
           children: [
-            HeaderComponent(),
-            StoryComponent(),
-            Expanded(
-              child: PostsComponent(),
-            ),
-            BottomBar(),
+            Expanded(child: MyApp.currMainComponent),
+            Container(
+              color: Colors.black,
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    InkWell(
+                      child: FaIcon(
+                        FontAwesomeIcons.home,
+                        color: Colors.white,
+                      ),
+                      onTap: () {
+                        print("home page");
+                        MyApp.currMainComponent = MyHomePageComponents();
+                        setState(() {});
+                      },
+                    ),
+                    InkWell(
+                      child: FaIcon(
+                        FontAwesomeIcons.search,
+                        color: Colors.white,
+                      ),
+                      onTap: () {
+                        MyApp.currMainComponent = SearchPage();
+                        setState(() {});
+                      },
+                    ),
+                    InkWell(
+                      child: FaIcon(
+                        FontAwesomeIcons.video,
+                        color: Colors.white,
+                      ),
+                    ),
+                    InkWell(
+                      child: FaIcon(
+                        FontAwesomeIcons.plusSquare,
+                        color: Colors.white,
+                      ),
+                    ),
+                    InkWell(
+                      child: FaIcon(
+                        FontAwesomeIcons.person,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            )
           ],
         ));
   }

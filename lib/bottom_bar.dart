@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:insta_copy/home_page_posts_component.dart';
+import 'package:insta_copy/main.dart';
+import 'package:insta_copy/search_page.dart';
 
 class BottomBar extends StatefulWidget {
   @override
@@ -9,6 +12,8 @@ class BottomBar extends StatefulWidget {
 
 class _BottomBarState extends State<BottomBar> {
   @override
+
+
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black,
@@ -22,11 +27,10 @@ class _BottomBarState extends State<BottomBar> {
                 FontAwesomeIcons.home,
                 color: Colors.white,
               ),
-              onTap: (){
-                // currComponent = "Home";
-                // print(currComponent);
-                // setState(() {
-                // });
+              onTap: () {
+                print("home page");
+                MyApp.currMainComponent = PostsComponent();
+                setState(() {});
               },
             ),
             InkWell(
@@ -35,10 +39,10 @@ class _BottomBarState extends State<BottomBar> {
                 color: Colors.white,
               ),
               onTap: () {
-                // currComponent = "Explore";
-                // print(currComponent);
-                // setState(() {
-                // });
+                // changeComponent(SearchPage());
+                print("search page");
+                MyApp.currMainComponent = SearchPage();
+                setState(() {});
               },
             ),
             InkWell(
