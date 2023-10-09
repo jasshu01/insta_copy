@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:insta_copy/home_page_story_component.dart';
 import 'package:insta_copy/home_page_top_component.dart';
 
 void main() {
@@ -41,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         children: [
           HeaderComponent(),
+          StoryComponent(),
         ],
       )
     );
