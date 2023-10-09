@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:insta_copy/home_page_top_component.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+        theme: ThemeData(
+            useMaterial3: true,
+            textTheme: Typography.whiteHelsinki,
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.black38)
+                .copyWith(background: Colors.black)),
       home:  MyHomePage(),
     );
   }
@@ -34,13 +36,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Colors.black,
       ),
-      body: Center(
-        child: Container(
-          color: Colors.black,
-        )
-      ),
+      body: Column(
+        children: [
+          HeaderComponent(),
+        ],
+      )
     );
   }
 }
