@@ -4,6 +4,7 @@ import 'package:insta_copy/home_page_components.dart';
 import 'package:insta_copy/home_page_posts_component.dart';
 import 'package:insta_copy/home_page_story_component.dart';
 import 'package:insta_copy/home_page_top_component.dart';
+import 'package:insta_copy/my_profile_page.dart';
 import 'package:insta_copy/search_page.dart';
 
 import 'bottom_bar.dart';
@@ -91,6 +92,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     InkWell(
+                      onTap: (){
+                        MyApp.currMainComponent=MyProfilePage();
+                        setState(() {
+
+                        });
+                      },
                       child: FaIcon(
                         FontAwesomeIcons.person,
                         color: Colors.white,
