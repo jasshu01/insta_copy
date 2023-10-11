@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:insta_copy/home_page_posts_component.dart';
+import 'package:insta_copy/HomePage/home_page_posts_component.dart';
 import 'package:insta_copy/main.dart';
-import 'package:insta_copy/search_page.dart';
+import 'package:insta_copy/ExplorePage/search_page.dart';
 
 class BottomBar extends StatefulWidget {
   @override

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:insta_copy/home_page_components.dart';
-import 'package:insta_copy/home_page_posts_component.dart';
-import 'package:insta_copy/home_page_story_component.dart';
-import 'package:insta_copy/home_page_top_component.dart';
-import 'package:insta_copy/my_profile_page.dart';
-import 'package:insta_copy/search_page.dart';
+import 'package:insta_copy/HomePage/home_page_components.dart';
+import 'package:insta_copy/HomePage/home_page_posts_component.dart';
+import 'package:insta_copy/HomePage/home_page_story_component.dart';
+import 'package:insta_copy/HomePage/home_page_top_component.dart';
+import 'package:insta_copy/MyProfile/my_profile_page.dart';
+import 'package:insta_copy/ExplorePage/search_page.dart';
 
 import 'bottom_bar.dart';
 

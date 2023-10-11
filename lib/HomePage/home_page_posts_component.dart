@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'apis.dart';
+import '../apis.dart';
 
 String truncateText(String text, int maxLength) {
   if (text.length <= maxLength) {

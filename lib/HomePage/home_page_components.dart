@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'home_page_posts_component.dart';
 import 'home_page_story_component.dart';
 import 'home_page_top_component.dart';
+import 'home_page_top_component.dart';
 
 void main() {
   runApp(const MyApp());
