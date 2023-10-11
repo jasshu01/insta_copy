@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:insta_copy/my_profile_page_header.dart';
 
+import 'my_profile_page_profile_details.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -36,6 +38,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
         body: Column(
       children: [
         MyProfilePageHeader(),
+        MyProfilePageProfileDetails(),
       ],
     ));
   }
