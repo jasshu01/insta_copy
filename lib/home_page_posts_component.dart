@@ -42,7 +42,7 @@ class _PostsComponentState extends State<PostsComponent> {
                       child: CircleAvatar(
                         radius: 20,
                         backgroundImage: NetworkImage(
-                          "https://source.unsplash.com/random/40x40?sig=${index}",
+                            "https://source.unsplash.com/400x400/?human?sig=${index}${index}"
                         ),
                       ),
                     ),
@@ -65,7 +65,8 @@ class _PostsComponentState extends State<PostsComponent> {
                   ]),
                 ),
                 Image.network(
-                  "https://source.unsplash.com/random/400x400?sig=$index",
+                  // "https://source.unsplash.com/random/400x400?sig=$index",
+                  "https://source.unsplash.com/400x400/?tech?sig=${index}",
                   // widget.postList![index].imageUrl,
                   fit: BoxFit.fitWidth,
                   height: 400,

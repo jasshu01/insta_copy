@@ -1,5 +1,4 @@
-
-class Data{
+class Data {
   static const List<String> myNames = [
     'John Smith',
     'Jane Doe',
@@ -16,6 +15,17 @@ class Data{
     'William Davis',
     'Olivia Rodriguez',
   ];
+  static const List<String> myProfileHighlights = [
+    "Travel",
+    "Food",
+    "Fitness",
+    "Art",
+    "Pets",
+    "Nature",
+    "Fashion",
+    "Music",
+  ];
+
   static List<Post> postList = [
     Post(
       imageUrl: 'https://picsum.photos/400/400', // Set the URL for this object
@@ -73,8 +83,8 @@ class Data{
     ),
     // Add more posts with details here
   ];
-
 }
+
 class Post {
   String imageUrl;
   final String name;
@@ -88,4 +98,3 @@ class Post {
     required this.likes,
   });
 }
-

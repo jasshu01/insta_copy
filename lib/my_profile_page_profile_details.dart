@@ -42,7 +42,7 @@ class _MyProfilePageProfileDetailsState
               CircleAvatar(
                 radius: 50,
                 backgroundImage: NetworkImage(
-                  "https://source.unsplash.com/random/400x400",
+                  "https://source.unsplash.com/400x400/?man",
                 ),
               ),
               Expanded(

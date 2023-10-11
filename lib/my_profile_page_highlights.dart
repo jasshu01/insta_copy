@@ -2,16 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:insta_copy/apis.dart';
 
-class StoryComponent extends StatefulWidget {
-  List<String>? myNames = Data.myNames;
-
-
-
+class MyProfilePageProfileHighlights extends StatefulWidget {
+  List<String>? myProfileHighlights = Data.myProfileHighlights;
+  
   @override
-  State<StoryComponent> createState() => _StoryComponentState();
+  State<MyProfilePageProfileHighlights> createState() => _MyProfilePageProfileHighlightsState();
 }
 
-class _StoryComponentState extends State<StoryComponent> {
+class _MyProfilePageProfileHighlightsState extends State<MyProfilePageProfileHighlights> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -35,13 +33,12 @@ class _StoryComponentState extends State<StoryComponent> {
                         child: CircleAvatar(
                           radius: 30,
                           backgroundImage: NetworkImage(
-                            // "https://source.unsplash.com/random/40x40?sig=${index + index}",
-                            "https://source.unsplash.com/400x400/?human?sig=${index}"
+                            "https://source.unsplash.com/40x40/?${widget.myProfileHighlights![index]}"
                           ),
                         ),
                       ),
                       Text(
-                        truncateText(widget.myNames![index], 8),
+                        truncateText(widget.myProfileHighlights![index], 8),
                       ),
                     ],
                   ),
@@ -52,7 +49,7 @@ class _StoryComponentState extends State<StoryComponent> {
               ),
             );
           },
-          itemCount: widget.myNames?.length,
+          itemCount: widget.myProfileHighlights?.length,
         ),
       ),
     );

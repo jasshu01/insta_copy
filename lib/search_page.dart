@@ -15,7 +15,8 @@ class _SearchPageState extends State<SearchPage> {
       child: GridView.builder(
         itemBuilder: (context, index) {
           return Image.network(
-            "https://source.unsplash.com/random/400x400?sig=$index",
+            // "https://source.unsplash.com/random/400x400?sig=$index",
+            "https://source.unsplash.com/400x400/?cars?sig=${index}",
             fit: BoxFit.fitWidth,
             height: 400,
             width: double.infinity,
