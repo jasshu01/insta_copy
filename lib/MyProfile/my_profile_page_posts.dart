@@ -12,35 +12,28 @@ class MyProfilePagePosts extends StatefulWidget {
 class _MyProfilePagePostsState extends State<MyProfilePagePosts> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        height: double.maxFinite,
-        child: GridView.builder(
-          itemBuilder: (context, index) {
-            return Image.network(
-              "https://source.unsplash.com/400x400/?luxury?sig=${index}",
-              fit: BoxFit.fitWidth,
-              height: 400,
-              width: double.infinity,
-              loadingBuilder: (context, child, loadingProgress) {
-                if (loadingProgress == null) return child;
-                return CircularProgressIndicator();
-              },
-              errorBuilder: (context, error, stackTrace) {
-                return Icon(
-                  Icons.new_releases_outlined,
-                  size: 400,
-                );
-              },
+    return GridView.builder(
+      itemBuilder: (context, index) {
+        return Image.network(
+          "https://source.unsplash.com/400x400/?luxury?sig=${index}",
+          fit: BoxFit.fitWidth,
+          height: 400,
+          width: double.infinity,
+          loadingBuilder: (context, child, loadingProgress) {
+            if (loadingProgress == null) return child;
+            return CircularProgressIndicator();
+          },
+          errorBuilder: (context, error, stackTrace) {
+            return Icon(
+              Icons.new_releases_outlined,
+              size: 400,
             );
           },
-          itemCount: 50,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3, crossAxisSpacing: 2, mainAxisSpacing: 2),
-        ),
-      ),
-
+        );
+      },
+      itemCount: 50,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3, crossAxisSpacing: 2, mainAxisSpacing: 2),
     );
   }
 }

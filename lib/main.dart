@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.black38)
               .copyWith(background: Colors.black)),
       home: MyHomePage(),
+
     );
   }
 }
@@ -47,6 +48,22 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: Text('Drawer Header'),
+              ),
+              Text("hello",style: TextStyle(color: Colors.black),),
+              Text("hello",style: TextStyle(color: Colors.black),),
+              Text("hello",style: TextStyle(color: Colors.black),),
+              Text("hello",style: TextStyle(color: Colors.black),),
+            ],
+          ),
         ),
         body: Column(
           children: [

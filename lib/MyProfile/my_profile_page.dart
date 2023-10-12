@@ -46,5 +46,15 @@ class _MyProfilePageState extends State<MyProfilePage> {
         Expanded(child: MyProfilePagePosts()),
       ],
     ));
+    //     SingleChildScrollView(
+    //       child: Column(
+    //   children: [
+    //       MyProfilePageHeader(),
+    //       MyProfilePageProfileDetails(),
+    //       MyProfilePageProfileHighlights(),
+    //       Expanded(child: MyProfilePagePosts()),
+    //   ],
+    // ),
+    //     ));
   }
 }
