@@ -100,10 +100,15 @@ class _MyProfilePageProfileDetailsState
                       onPressed: () {},
                       child: Text("Share Profile")),
                 ),
-                FaIcon(
-                  Icons.person_add_alt_outlined,
-                  color: Colors.white,
-                  size: 26,
+                InkWell(
+                  onTap: (){
+
+                  },
+                  child: FaIcon(
+                    Icons.person_add_alt_outlined,
+                    color: Colors.white,
+                    size: 26,
+                  ),
                 )
               ],
             ),
@@ -113,3 +118,4 @@ class _MyProfilePageProfileDetailsState
     );
   }
 }
+
